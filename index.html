@@ -116,6 +116,14 @@
                 localStorage.setItem(storageKey, JSON.stringify(userData));
             }
         }
+
+        function getUserList() {
+            if (checkForStorage()) {
+                return JSON.parse(localStorage.getItem(storageKey)) || [];
+            } else {
+                return [];
+            }
+        }
     </script>
 </body>
 
